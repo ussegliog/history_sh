@@ -8,3 +8,18 @@ The command **history_guardian** allows :
 * To scan local histories : *history_guardian scan*
 
 Once a local history is initialized, this history is automatically loaded with the *cd* command towards the local directory. You can change history with two local directories with *cd <new_local_dir> hist*
+
+## Configuration
+
+To override the history handle, the .bashrc has to be modified with :
+
+---
+HISTMODE='global'
+
+HISTSCRIPS='/home/gaelle/Programming/history_bash/'
+
+alias history_guardian='source <history_sh_path>/history_guardian.sh'
+
+alias cd='source <history_sh_path>/history_guardian_cd.sh'
+
+---
