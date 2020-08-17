@@ -56,10 +56,10 @@ main()
 	    if [[ "${1:0:1}" == / || "${1:0:2}" == ~[/a-z] ]]
 	    then
 		# absolute
-		directory=${1}.history
+		directory=${1%/}/.history
 	    else
 		# relative
-		directory=${PWD}/${1}.history
+		directory=${PWD}/${1%/}/.history
 	    fi
 	  
 	fi    
