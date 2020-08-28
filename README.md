@@ -14,12 +14,12 @@ Once a local history is initialized, this history is automatically loaded with t
 To override the history handle, the .bashrc has to be modified with :
 
 ---
-HISTMODE='global'
+HISTMODE="global"
 
-HISTSCRIPS='/home/gaelle/Programming/history_bash/'
+HISTSCRIPS="<history_sh_path>"
 
-alias history_guardian='source <history_sh_path>/history_guardian.sh'
+alias history_guardian='source $HISTSCRIPS/history_guardian.sh'
 
-alias cd='source <history_sh_path>/history_guardian_cd.sh'
+alias cd='source $HISTSCRIPS/history_guardian_cd.sh'
 
 ---
